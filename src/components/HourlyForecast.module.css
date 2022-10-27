@@ -1,0 +1,61 @@
+.card{
+    display: inline-block;
+    margin-top: 7em;
+    background-color: rgba(73,80,87,.3);
+    padding: 20px;
+    padding-top: 0;
+    border-radius: 10px !important;
+}
+
+.weatherInfo{
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+    color: white;
+    opacity: .9;
+    margin-bottom: 0;
+}
+
+.location{
+    font-size: 35px;
+}
+
+.temperature{
+    font-size: 7em;
+    color: #E47124;
+}
+
+.weatherCondition{
+    font-size: 1em;
+}
+
+.wrapper{
+    display: inline-block;
+}
+
+.icon{
+    width:100px
+}
+
+.mainWrapper{
+    display: inline-block;
+
+}
+
+.middleWrapper{
+    display: inline-block;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.date{
+    color: white;
+    font-size: 20px;
+}
+
+.high{
+    margin-right: 10px;
+}
+
+.span{
+    color: #E47124;
+}

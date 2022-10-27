@@ -1,0 +1,49 @@
+.form{
+    width: 30em;
+    margin: auto;
+    padding-top: 6em;
+}
+
+.button{
+    border: 1px;
+    margin-left: 0 !important;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+.input{
+    background-color: #495057;
+    opacity: .9;
+    color: white !important;
+    border-color: #495057;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+.searchIcon{
+    background-color: #495057;
+    opacity: .9;
+    color: white;
+    border-color: #495057;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+
+.input:focus{
+    background-color: #495057;
+    box-shadow: none;
+    border-color: #495057;
+}
+
+input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white !important;
+    opacity: .8 !important;
+}
+
+input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white !important;
+}
+
+input::-ms-input-placeholder { /* Microsoft Edge */
+    color: white !important;
+}

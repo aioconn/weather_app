@@ -1,0 +1,41 @@
+.card{
+    display: inline-block;
+    margin-top: 7em;
+    background-color: rgba(73,80,87,.3);
+    padding: 20px;
+    border-radius: 10px !important;
+}
+
+.weatherInfo{
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+    color: white;
+    opacity: .9;
+    margin-bottom: 0px;
+}
+
+.location{
+    font-size: 20px;
+}
+
+.temperature{
+    font-size: 5em;
+    margin-right: 20px;
+    color: #E47124;
+}
+
+.weatherCondition{
+    padding-bottom: 10px;
+    font-size: 2em;
+}
+
+.wrapper{
+    display: inline-flex;
+}
+
+.icon{
+    padding-top: 5px;
+}
+.span{
+    color: #E47124;
+}
