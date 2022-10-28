@@ -21,7 +21,7 @@ const HourlyForecast = props => {
                             <span className={styles.location}>{props.name}</span>
                             <div>
                                 <span>Max: <span className={styles.max}>{Math.round(props.hourlyData.daily[0].temp.max)}&deg;</span></span>
-                                <span>Min: <span className={styles.span}>{Math.round(props.hourlyData.daily[0].temp.max)}&deg;</span></span>
+                                <span>Min: <span className={styles.span}>{Math.round(props.hourlyData.daily[0].temp.min)}&deg;</span></span>
                             </div>
                             <div>
                                 {props.data.daily ? <span className={styles.high}>High: <span className={styles.span}>{props.data.daily.max}&deg;</span></span> : null}
