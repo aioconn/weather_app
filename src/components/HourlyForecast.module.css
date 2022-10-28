@@ -20,7 +20,7 @@
 }
 
 .temperature{
-    font-size: 7em;
+    font-size: 6.5em;
     color: #E47124;
 }
 
@@ -59,3 +59,32 @@
 .span{
     color: #E47124;
 }
+
+.max{
+    color: #E47124;
+    margin-right: 20px;
+}
+
+.hourlyWrapper{
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    overflow-x: auto;
+    width: 550px;
+    white-space: nowrap;
+}
+
+.hourlyWrapper::-webkit-scrollbar{
+    width: 10px;
+}
+
+.hourlyWrapper::-webkit-scrollbar-track{
+    background-color: darkgrey;
+    border-radius: 15px;
+}
+
+.hourlyWrapper::-webkit-scrollbar-thumb{
+    background-color: #67696b;
+    border-radius: 15px;
+}
+

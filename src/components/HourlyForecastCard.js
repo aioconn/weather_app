@@ -1,39 +1,27 @@
-import React, {useState} from 'react';
+import React from 'react';
 import styles from './HourlyForecastCard.module.css'
 import Card from "react-bootstrap/Card";
-import Axios from 'axios';
 
 
 const HourlyForecastCard = props => {
 
-    const [data, setData] = useState('')
-
-
-    /*
-    Axios.get(`http://api.openweathermap.org/data/3.0/onecall?lat=${props.data.coord.lat}&lon=${props.data.coord.lon}&units=imperial&exclude=alerts,minutely,current&&appid=`)
-        .then( response => {
-            setData(response.data)
-            console.log(data)
-        });
-    */
+    const convertTime = (time)  => {
+        const date = new Date(time * 1000);
+        return(
+            date.toLocaleTimeString("en-US", {timeStyle: 'short'})
+        )
+    }
 
     return (
         <Card className={styles.card}>
             <div>
-                Time
-                {
-                    /*
-                    const unixTimestamp = props.data.hourly.dt;
-                    const date = new Date(unixTimestamp * 1000);
-                    {date.toLocaleTimeString("en-US");}
-                    */
-                }
+                {convertTime(props.time)}
             </div>
             <div>
-                {props.data.main ? <span className={styles.temperature}> {Math.round(props.data.main.temp)}&deg;</span> : null}
+                {<span className={styles.temperature}> {Math.round(props.temp)}&deg;</span>}
             </div>
             <div>
-                {props.data.weather ? <img src={`https://openweathermap.org/img/wn/${props.data.weather[0].icon}@2x.png`}/> : null}
+                {<img className={styles.icon} src={`https://openweathermap.org/img/wn/${props.icon}@2x.png`}/>}
             </div>
         </Card>
     )

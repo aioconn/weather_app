@@ -2,9 +2,19 @@
     display: inline-flex;
     margin-right: 20px;
     margin-bottom: 30px;
-    background-color: rgba(73,80,87,.7);
+    background-color: rgba(73,80,87,.5);
+    border: 2px #27292e solid;
 }
 
 .card div{
     color: white;
+}
+
+.temperature{
+    color: #E47124;
+    font-size: 1.3em;
+}
+
+.icon{
+    width: 90px
 }

@@ -9,9 +9,10 @@ import HourlyForecast from "./components/HourlyForecast";
 function App() {
 
     const [data, setData] = useState('')
+    const [hourlyData, setHourlyData] = useState('');
     const [showCurrentWeather, setShowCurrentWeather] = useState(false);
     const [showHourlyWeather, setShowHourlyWeather] = useState(false);
-    const [enteredLocation, setEnteredLocation] = useState('')
+    const [enteredLocation, setEnteredLocation] = useState('');
 
 
     const getCurrentWeather = (name) => {
@@ -22,7 +23,13 @@ function App() {
             .then( response => {
                 setData(response.data)
                 console.log(response.data)
+                Axios.get(`http://api.openweathermap.org/data/3.0/onecall?lat=${response.data.coord.lat}&lon=${response.data.coord.lon}&units=imperial&exclude=alerts,minutely,current&&appid=b0a6cfcfb580acf1aced9dea6f2de6f6`)
+                    .then( response => {
+                        setHourlyData(response.data)
+                        console.log(response.data)
+                    })
             })
+
     }
 
     const addCurrentWeatherHandler = (location) => {
@@ -47,7 +54,7 @@ function App() {
       <div className={"background-image"}>
           <LocationForm currentWeather={addCurrentWeatherHandler}/>
           {showCurrentWeather && <CurrentWeather data={data} name={enteredLocation} showForecast={addHourlyWeatherHandler}/>}
-          {showHourlyWeather && <HourlyForecast data={data} name={enteredLocation} showCurrentWeather={showCurrentWeatherHandler}/>}
+          {showHourlyWeather && <HourlyForecast data={data} hourlyData={hourlyData} name={enteredLocation} showCurrentWeather={showCurrentWeatherHandler}/>}
       </div>
   );
 }
