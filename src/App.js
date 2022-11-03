@@ -19,11 +19,11 @@ function App() {
         const location = name.trim().split(',');
         const city = location[0].trim();
         const state = location[1].trim();
-        Axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city},${state},US&appid=b0a6cfcfb580acf1aced9dea6f2de6f6&units=imperial`)
+        Axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city},${state},US&appid=&units=imperial`)
             .then( response => {
                 setData(response.data)
                 console.log(response.data)
-                Axios.get(`http://api.openweathermap.org/data/3.0/onecall?lat=${response.data.coord.lat}&lon=${response.data.coord.lon}&units=imperial&exclude=alerts,minutely,current&&appid=b0a6cfcfb580acf1aced9dea6f2de6f6`)
+                Axios.get(`http://api.openweathermap.org/data/3.0/onecall?lat=${response.data.coord.lat}&lon=${response.data.coord.lon}&units=imperial&exclude=alerts,minutely,current&&appid=`)
                     .then( response => {
                         setHourlyData(response.data)
                         console.log(response.data)
